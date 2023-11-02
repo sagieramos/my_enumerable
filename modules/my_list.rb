@@ -6,13 +6,6 @@ class MyList
     end
 
     def each
-        if block_given?
-            for i in 0...@list.length
-                yield @list[i]
-            end
-        else
-            enum = to_enum(:each)
-            enum
-        end
+        @list.each { |item| yield item }
     end
 end
