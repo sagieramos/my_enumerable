@@ -6,21 +6,16 @@ class MyList
 end
 
 list = MyList.new(1, 2, 3, 4, 8, 7, 6, -3, 0)
-puts list.inspect
 
-# Test #all?
-puts list.all? { |e| e < 5 } 
-puts list.all? { |e| e > 5 } 
-
-# Test #any?
-puts list.any? { |e| e == 2 }
-puts list.any? { |e| e == 5 }
+# Test #all? and #any?
+puts "All values are less than 9: #{list.all? { |e| e < 9 }}"
+puts "Any value is equal to 2: #{list.any? { |e| e == 2 }}"
+puts "Any value is equal to 5: #{list.any? { |e| e == 5 }}"
 
 # Test #filter
-print "#{list.filter { |e| e.even? }}\n"
+filtered_list = list.filter(&:even?)
+puts "Filtered even numbers: #{filtered_list}"
 
-# Test max
-print "Max value: #{list.max}\n"
-
-# Test min
-print "Max value: #{list.min}\n"
+# Test max and min
+puts "Max value: #{list.max}"
+puts "Min value: #{list.min}"

@@ -1,11 +1,11 @@
 class MyList
-    attr_reader :list
+  attr_reader :list
 
-    def initialize(*item)
-      @list = item
-    end
+  def initialize(*item)
+    @list = item
+  end
 
-    def each
-        @list.each { |item| yield item }
-    end
+  def each(&block)
+    @list.each(&block)
+  end
 end
