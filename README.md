@@ -188,6 +188,6 @@ If you like this project, please stay tune for more features
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/sagieramos/my_enumerable/blob/3fc0b09b8d7f0ddafbb78ea540449e00e7162866/LICENSE) licensed.
+This project is [MIT](https://github.com/sagieramos/my_enumerable/blob/main/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
