@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="./Screenshot from 2023-11-02 01-48-52.png" alt="logo" max-width="746px"  height="auto" />
+  <img src="./screenshot.png" alt="logo" max-width="746px"  height="auto" />
   <br/>
 
   <h3><b>Decode a Morse code message</b></h3>
@@ -20,7 +20,6 @@
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-    - [For Unix:](#for-unix)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -54,7 +53,6 @@
   - #filter
   - #max
   - #min
-  - #sort
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,30 +81,53 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
+``` sh
+  cd my_enumerable
+  irb
+```
+
+```sh
+  # import the module
+  require_relative './modules/my_list'
+  require_relative './modules/my_enumerable'
+
+  class MyList
+    include MyEnumerable
+  end
+```
 
 ### Usage
 
+example
+
+```sh
+  list = MyList.new(1, 2, 3, 4, 8, 7, 6, -3, 0)
+
+  # Test #all?
+  list.all? { |e| e < 5 } 
+  list.all? { |e| e > 5 } 
+
+  # Test #any?
+  list.any? { |e| e == 2 }
+  list.any? { |e| e == 5 }
+
+  # Test #filter
+  list.filter { |e| e.even? }
+
+  # Test max
+  list.max
+
+  # Test min
+  list.min
+
+```
 
 ### Run tests
 
 To run tests, run the following command:
 
 ``` sh
-  ruby 
-```
-
-### For Unix:
-
-First, you'll need to make the script executable
-
-``` sh
-  chmod +x 
-```
-
-Then run this line in your terminal
-
-``` sh
-  ./
+  ruby main.rb
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -128,10 +149,9 @@ Then run this line in your terminal
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[More quaries]**
+- [ ] **[Implement sort enumerable]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
