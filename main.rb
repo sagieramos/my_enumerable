@@ -1,5 +1,5 @@
-require_relative './modules/my_list'
-require_relative './modules/my_enumerable'
+require_relative 'modules/my_list'
+require_relative 'modules/my_enumerable'
 
 class MyList
   include MyEnumerable
