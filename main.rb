@@ -5,7 +5,7 @@ class MyList
   include MyEnumerable
 end
 
-list = MyList.new(1, 2, 3, 4)
+list = MyList.new(1, 2, 3, 4, 8, 7, 6, -3, 0)
 puts list.inspect
 
 # Test #all?
@@ -18,3 +18,9 @@ puts list.any? { |e| e == 5 }
 
 # Test #filter
 print "#{list.filter { |e| e.even? }}\n"
+
+# Test max
+print "Max value: #{list.max}\n"
+
+# Test min
+print "Max value: #{list.min}\n"
